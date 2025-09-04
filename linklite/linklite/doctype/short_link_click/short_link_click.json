@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2025-09-04 09:24:36.328174",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -66,10 +66,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-04 09:40:11.111203",
+ "modified": "2025-09-04 10:06:40.187927",
  "modified_by": "Administrator",
  "module": "Linklite",
  "name": "Short Link Click",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
