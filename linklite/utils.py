@@ -7,8 +7,21 @@ def path_resolver(path: str):
     #frappe.redirect("https://www.google.com/")
     if frappe.db.exists("ShortLink", {"short_link":path}):
         #we want to redirect
-        destination =frappe.db.get_value("ShortLink",{"short_link":path},"destination_url")
-        frappe.redirect(destination)
+        short_link =frappe.db.get_value("ShortLink",{"short_link":path}, ["destination_url", "name"], as_dict=True )
+
+        click =frappe.new_doc("Short Link Click")
+
+        request_headers =frappe.request.headers
+        click.ip =request_headers.get("X-Real-IP")
+        click.user_agent =request_headers.get("User-Agent")
+        click.referer =request_headers.get("Referer")
+
+        click.link =short_link.name
+        click.insert().submit()
+        frappe.db.commit() #TO REMOVE ONCE  MYISAM
+
+
+        frappe.redirect(short_link.destination_url)
 
 
     #else pass it on!

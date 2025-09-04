@@ -40,8 +40,13 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-09-03 23:07:48.560130",
+ "links": [
+  {
+   "link_doctype": "Short Link Click",
+   "link_fieldname": "link"
+  }
+ ],
+ "modified": "2025-09-04 09:51:47.373160",
  "modified_by": "Administrator",
  "module": "Linklite",
  "name": "ShortLink",
