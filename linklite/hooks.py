@@ -5,6 +5,11 @@ app_description = "Simple and conveys lightweight link management."
 app_email = "govardhanpeluri152@gmail.com"
 app_license = "agpl-3.0"
 
+website_path_resolver ="linklite.utils.path_resolver"
+
+
+
+
 # Apps
 # ------------------
 
